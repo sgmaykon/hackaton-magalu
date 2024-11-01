@@ -1,13 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Criação maneira de Cloud!</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas do dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=titulo>
+        <h1>Bem-vindo!<br>
+            Esse é o seu gerenciador de tarefas.  
+        </h1>
+    </div>
+    <div class="cabecalho">
+        <p class="texto">Anexe o documento recebido do seu supervisor para receber suas tarefas diárias e a lista<br>
+            de equipamentos necessários para realizá-la.<br><br>
+            Abaixo aparecerão alguns documentos relevantes para realizar a sua tarefa.</p>
+        <div class="submission">
+            <input type="file" id="input-file" name="Adicione o seu áudio"><br>
+            <button onClick="processData()" id="button-file">Anexar Documento<img src="images/download.svg"></button>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <div class="lists">
+                <div class="todo-app">
+                    <h2>Tarefas do dia:<span id="data"> </span> <img src="images/icon.png"> </h2>
+                    <div class="row">
+                        <input type="text" id="input-box1" placeholder="Adicione a sua tarefa">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="list-container1">
+                    </ul>
+                </div>
+                <div class="todo-app">
+                    <h2>Equipamentos necessários<img src="images/icon.png"></h2>
+                    <div class="row">
+                        <input type="text" id="input-box2" placeholder="Adicione os equipamentos">
+                        <button onclick="addEquipment()">Add</button>
+                    </div>
+                    <ul id="list-container2">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="manuais">
+                <h2>Manuais Encontrados<span id="data"></span><img src="images/icon.png"></h2>
+                    <div class="bloco">
+                        <h2>Manual</h2>
+                        <h3>Motor elétrico tri-fásico</h3><br>
+                        <p>Inglês e português</p>
+                    </div>
+                    <div class="bloco">
+                        <h2>Manual</h2>
+                        <h3>Motor elétrico tri-fásico</h3><br>
+                        <p>Inglês e português</p>
+                    </div>
+                    <div class="bloco">
+                        <h2>Manual</h2>
+                        <h3>Motor elétrico tri-fásico</h3><br>
+                        <p>Inglês e português</p>
+                    </div>
+                    <div class="bloco">
+                        <h2>Manual</h2>
+                        <h3>Motor elétrico tri-fásico</h3><br>
+                        <p>Inglês e português</p>
+                    </div><br>
+                    <div class="bloco">
+                        <h2>Manual</h2>
+                        <h3>Motor elétrico tri-fásico</h3><br>
+                        <p>Inglês e português</p>
+                    </div>
+                    <div class="bloco">
+                        <h2>Manual</h2>
+                        <h3>Motor elétrico tri-fásico</h3><br>
+                        <p>Inglês e português</p>
+                    </div>
+            </div>
+        </div>
+        <div class="assignature">
+            <p>Powered by The Beatles - Hackathon Tractian</p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
 </html>

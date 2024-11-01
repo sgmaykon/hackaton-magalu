@@ -1,0 +1,27 @@
+# Arquivos de variáveis de ambiente
+.env
+*.env
+
+# Arquivos de estado e backups do Terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+
+# Diretório de bloqueio de estado do Terraform
+.terraform/
+
+# Plano de execução do Terraform
+tfplan
+
+# Overrides e variáveis locais
+*.tfvars
+*.tfvars.json
+
+# Arquivos de log do Terraform
+crash.log
+*.log
+
+# Logs e arquivos temporários do sistema
+*.swp
+*.bak
+.DS_Store

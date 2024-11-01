@@ -396,10 +396,4 @@ form {
   
   .custom-button{
     margin-left: 640px;
-
-  }
-  .centerpls{
-    display: flex;
-  justify-content: center;
-  align-items: center;
   }

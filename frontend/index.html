@@ -8,79 +8,95 @@
 </head>
 <body>
     <div class=titulo>
-        <h1>Bem-vindo!<br>
-            Esse é o seu gerenciador de tarefas.  
+        <h1>Cloud Legal!<br> 
         </h1>
-    </div>
-    <div class="cabecalho">
-        <p class="texto">Anexe o documento recebido do seu supervisor para receber suas tarefas diárias e a lista<br>
-            de equipamentos necessários para realizá-la.<br><br>
-            Abaixo aparecerão alguns documentos relevantes para realizar a sua tarefa.</p>
-        <div class="submission">
-            <input type="file" id="input-file" name="Adicione o seu áudio"><br>
-            <button onClick="processData()" id="button-file">Anexar Documento<img src="images/download.svg"></button>
-        </div>
     </div>
     <div class="container">
         <div>
             <div class="lists">
                 <div class="todo-app">
-                    <h2>Tarefas do dia:<span id="data"> </span> <img src="images/icon.png"> </h2>
+                    <h2>Qual nome você quer dar pra sua Cloud?</h2>
                     <div class="row">
-                        <input type="text" id="input-box1" placeholder="Adicione a sua tarefa">
-                        <button onclick="addTask()">Add</button>
+                        <input  type="text" id="input-box1" placeholder="Adicione um nome pra sua Cloud">
                     </div>
+                    <h2>Qual Sistema Operacional as suas máquinas devem ter?</h2> 
+                    <div class="row">
+                        <form action="#">
+                            <label class="options" for="lang"></label>
+                            <div class="selector">
+                            <select class="select" name="SO" id="lang">
+                              <option value="ubuntu-24.04">Ubuntu 24.04 LTS</option>
+                              <option value="ubuntu-22.04">Ubuntu 22.04 LTS</option>
+                              <option value="ubuntu-20.04">Ubuntu 20.04 LTS</option>
+                              <option value="oraclelinux-9">Oracle Linux 9</option>
+                              <option value="oraclelinux-8">Oracle Linux 8</option>
+                              <option value="rocky-09">Rocky Linux 09</option>
+                              <option value="debian-12">Debian 12 LTS</option>
+                              <option value="opensuse-15.6">OpenSUSE 15.6</option>
+                              <option value="fedora-40">Fedora 40</option>
+                              <option value="windows-server-2022">Windows Server 2022</option>
+                            </select>
+                        </div>
+                          </form>
+                          
                     <ul id="list-container1">
                     </ul>
-                </div>
-                <div class="todo-app">
-                    <h2>Equipamentos necessários<img src="images/icon.png"></h2>
-                    <div class="row">
-                        <input type="text" id="input-box2" placeholder="Adicione os equipamentos">
-                        <button onclick="addEquipment()">Add</button>
-                    </div>
-                    <ul id="list-container2">
-                    </ul>
+                    
                 </div>
             </div>
+            <div class="todo-app">
+                <h2>Qual(is) linguagem(ns) você gostaria na máquina?</h2>
+                <form action="#">
+                    <fieldset>
+                      <legend>Choose Programming Languages</legend>
+                  
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="language" value="javascript">
+                        JavaScript
+                        <span class="checkmark"></span>
+                      </label>
+                  
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="language" value="python">
+                        Python
+                        <span class="checkmark"></span>
+                      </label>
+                  
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="language" value="java">
+                        Java
+                        <span class="checkmark"></span>
+                      </label>
+                  
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="language" value="cpp">
+                        C/C++
+                        <span class="checkmark"></span>
+                      </label>
+                  
+                  
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="language" value="go">
+                        Go
+                        <span class="checkmark"></span>
+                      </label>
+
+                    </fieldset>
+                  </form>
+                
+                  <h2>Insira um arquivo requirements.txt com as bibliotecas e pacotes desejados</h2>
+                  <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="file-upload"></label>
+                    <input type="file" id="file-upload" name="file" accept=".html">
+                  </form>
+                
+                </div>
         </div>
-        <div>
-            <div class="manuais">
-                <h2>Manuais Encontrados<span id="data"></span><img src="images/icon.png"></h2>
-                    <div class="bloco">
-                        <h2>Manual</h2>
-                        <h3>Motor elétrico tri-fásico</h3><br>
-                        <p>Inglês e português</p>
-                    </div>
-                    <div class="bloco">
-                        <h2>Manual</h2>
-                        <h3>Motor elétrico tri-fásico</h3><br>
-                        <p>Inglês e português</p>
-                    </div>
-                    <div class="bloco">
-                        <h2>Manual</h2>
-                        <h3>Motor elétrico tri-fásico</h3><br>
-                        <p>Inglês e português</p>
-                    </div>
-                    <div class="bloco">
-                        <h2>Manual</h2>
-                        <h3>Motor elétrico tri-fásico</h3><br>
-                        <p>Inglês e português</p>
-                    </div><br>
-                    <div class="bloco">
-                        <h2>Manual</h2>
-                        <h3>Motor elétrico tri-fásico</h3><br>
-                        <p>Inglês e português</p>
-                    </div>
-                    <div class="bloco">
-                        <h2>Manual</h2>
-                        <h3>Motor elétrico tri-fásico</h3><br>
-                        <p>Inglês e português</p>
-                    </div>
-            </div>
+        <div class="centerpls">
+          <button class="custom-button">ENVIAR</button>
         </div>
         <div class="assignature">
-            <p>Powered by The Beatles - Hackathon Tractian</p>
+            <p>Powered by The La Li Lu Le LO - Hackathon Magalu</p>
         </div>
     </div>
 <script src="script.js"></script>

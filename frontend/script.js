@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     console.log("Dados para envio:", requestData);
+    
   
       // Example of sending data to a server (uncomment to use)
       /*

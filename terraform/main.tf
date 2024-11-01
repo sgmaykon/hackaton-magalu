@@ -13,12 +13,12 @@ provider "mgc" {
 
 resource "mgc_virtual_machine_instances" "vm-nordeste" {
   provider = mgc.nordeste
-  name     = "vm-nordeste"
+  name     = var.vmname
   machine_type = {
     name = var.machinetype
   }
   image = {
-    name = var.image
+    name = "cloud-ubuntu-22.04 LTS"
   }
   network = {
     associate_public_ip = true

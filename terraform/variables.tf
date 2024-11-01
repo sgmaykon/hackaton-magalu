@@ -12,3 +12,8 @@ variable "machinetype" {
   description = "Tipo da VM"
   type        = string
 }
+
+variable "vmname" {
+  description = "Nome da VM"
+  type        = string
+}

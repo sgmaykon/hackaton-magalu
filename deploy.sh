@@ -14,4 +14,4 @@ cd $TF_DIR
 terraform init
 terraform fmt
 terraform validate
-terraform apply
+terraform apply -lock=false

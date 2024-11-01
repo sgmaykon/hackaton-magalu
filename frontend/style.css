@@ -22,6 +22,8 @@ body {
     padding: 0.64px;
     color:#fff;
     font-size: 25px;
+    margin-left: 20px;
+    padding-top: 13px;
 }
 
 .magalu{
@@ -29,6 +31,7 @@ body {
   height: auto;
   margin-left: 200px;
   margin-top: 20px;
+  margin-right: 20px;
 }
 .texto {
     margin: 18px 0px 0px 64px;
@@ -123,7 +126,7 @@ form {
     height: auto;
     min-width: 480px;
     background: #fff;
-    margin: 36px 0px 80px 55px;
+    margin: 36px 0px 80px 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
     display: inline-block;
@@ -419,5 +422,6 @@ form {
   }
   
   .custom-button{
-    margin-left: 640px;
+    margin-left: 920px;
+    margin-bottom: 40px;
   }

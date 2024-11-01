@@ -98,11 +98,21 @@ form {
   }
 
 
-
+.todo-app2{
+  width: auto;
+    height: auto;
+    min-width: 620px;
+    background: #fff;
+    margin: 36px 0px 80px 55px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 2px solid #1E293B;
+}
 .todo-app {
     width: auto;
     height: auto;
-    min-width: 640px;
+    min-width: 480px;
     background: #fff;
     margin: 36px 0px 80px 55px;
     padding: 40px 30px 70px;

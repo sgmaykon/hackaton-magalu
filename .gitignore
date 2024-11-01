@@ -3,6 +3,7 @@
 *.env
 
 # Arquivos de estado e backups do Terraform
+terraform.tfstate.*
 terraform.tfstate
 terraform.tfstate.backup
 .terraform.lock.hcl

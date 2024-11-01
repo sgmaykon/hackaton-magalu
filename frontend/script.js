@@ -30,10 +30,14 @@ document.addEventListener("DOMContentLoaded", function() {
       const fileName = file ? file.name : "Nenhum arquivo selecionado";
   
       // Display the data (for debugging purposes)
-      console.log("Cloud Name:", cloudName);
-      console.log("Operating System:", selectedOS);
-      console.log("Programming Languages:", selectedLanguages);
-      console.log("Uploaded File:", fileName);
+      const requestData = {
+        cloudName: cloudName,
+        operatingSystem: selectedOS,
+        languages: selectedLanguages,
+        fileName: fileName
+    };
+
+    console.log("Dados para envio:", requestData);
   
       // Example of sending data to a server (uncomment to use)
       /*

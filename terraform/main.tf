@@ -13,11 +13,7 @@ provider "mgc" {
 
 resource "mgc_virtual_machine_instances" "vm-nordeste" {
   provider = mgc.nordeste
-<<<<<<< HEAD
   name     = var.vmname
-=======
-  name     = "vm-nordeste"
->>>>>>> 6bd54df83497225685f2acfe863b50a331e34017
   machine_type = {
     name = var.machinetype
   }
@@ -33,8 +29,4 @@ resource "mgc_virtual_machine_instances" "vm-nordeste" {
 
 output "ip" {
   value = mgc_virtual_machine_instances.vm-nordeste.network.public_address
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6bd54df83497225685f2acfe863b50a331e34017

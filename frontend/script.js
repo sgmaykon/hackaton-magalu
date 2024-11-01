@@ -1,96 +1,67 @@
-const inputBox1 = document.getElementById("input-box1");
-const inputBox2 = document.getElementById("input-box2");
-const inputFile = document.getElementById("input-file");
-const listContainer1 = document.getElementById("list-container1");
-const listContainer2 = document.getElementById("list-container2");
+document.addEventListener("DOMContentLoaded", function() {
+    // Select elements
+    const cloudNameInput = document.getElementById("input-box1");
+    const osSelect = document.getElementById("lang");
+    const languageCheckboxes = document.querySelectorAll('input[name="language"]');
+    const fileInput = document.getElementById("file-upload");
+    const submitButton = document.querySelector(".custom-button");
+  
+    // Event listener for the ENVIAR button
+    submitButton.addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent form submission
+  
+      // Get the cloud name
+      const cloudName = cloudNameInput.value.trim();
+      if (!cloudName) {
+        alert("Por favor, insira um nome para sua Cloud!");
+        return;
+      }
+  
+      // Get selected OS
+      const selectedOS = osSelect.value;
+  
+      // Get selected programming languages
+      const selectedLanguages = Array.from(languageCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+  
+      // Get the uploaded file details
+      const file = fileInput.files[0];
+      const fileName = file ? file.name : "Nenhum arquivo selecionado";
+  
+      // Display the data (for debugging purposes)
+      const requestData = {
+        cloudName: cloudName,
+        operatingSystem: selectedOS,
+        languages: selectedLanguages,
+        fileName: fileName
+    };
 
-function addTask() {
-    if (inputBox1.value === '') {
-        alert("You must write something!");
-    }
-    else {
-        let li = document.createElement("li");
-        li.innerHTML = inputBox1.value;
-        listContainer1.appendChild(li);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
-    }
-    inputBox1.value = "";
-    saveData();
-}
-
-function addEquipment() {
-    if (inputBox2.value === '') {
-        alert("You must write something!");
-    }
-    else {
-        let li = document.createElement("li");
-        li.innerHTML = inputBox2.value;
-        listContainer2.appendChild(li);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
-    }
-    inputBox2.value = "";
-    saveData();
-}
-
-listContainer1.addEventListener("click", function(e) {
-    if (e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
-        saveData()
-    }
-    else if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
-        saveData()
-    }
-}, false);
-
-listContainer2.addEventListener("click", function(e) {
-    if (e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
-        saveData()
-    }
-    else if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
-        saveData()
-    }
-}, false);
-
-function saveData() {
-    localStorage.setItem("data", listContainer1.innerHTML);
-    localStorage.setItem("data", listContainer2.innerHTML);
-}
-
-function showTask() {
-    listContainer1.innerHTML = localStorage.getItem("data");
-}
-showTask();
-
-function showTask() {
-    listContainer2.innerHTML = localStorage.getItem("data");
-}
-showTask();
-
-function processData() {
-    if (inputFile.value === '') {
-        alert("You must upload a document!");
-    }
-    inputFile.value = "";
-    criarTarefas();
-}
-
-// Data atual
-const dataAtual = new Date();
-
-// Formatar a data como dia/mês/ano
-const dia = String(dataAtual.getDate()).padStart(2, '0');
-const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
-const ano = dataAtual.getFullYear();
-
-// Combinar em um formato legível
-const dataFormatada = `${dia}/${mes}/${ano}`;
-
-// Inserir a data no elemento HTML
-document.getElementById("data").textContent = dataFormatada;
+    console.log("Dados para envio:", requestData);
+  
+      // Example of sending data to a server (uncomment to use)
+      /*
+      fetch('/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          cloudName: cloudName,
+          operatingSystem: selectedOS,
+          languages: selectedLanguages,
+          fileName: fileName,
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        alert("Informações enviadas com sucesso!");
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+      */
+    });
+  });
+  
